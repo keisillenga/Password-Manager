@@ -13,3 +13,6 @@ def load_password():
        return json.load(file)
      except json.JSONDcodeError:
        return{}
+def save_password():
+  with open(FILE_NAME, "w") as file:
+    json.dump(password, file, indent=4)
