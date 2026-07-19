@@ -16,3 +16,14 @@ def load_password():
 def save_password():
   with open(FILE_NAME, "w") as file:
     json.dump(password, file, indent=4)
+def generate_password(length=12):
+  characters = (
+  string.ascii_letters +
+  string.digits +
+  string.punctuation
+)
+password = ""
+for _ in range(length):
+  password += random.choice(characters)
+return password
+
