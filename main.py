@@ -26,4 +26,21 @@ password = ""
 for _ in range(length):
   password += random.choice(characters)
 return password
+def  add_password():
+  password = load_password()
+   website = input("Website: ")
+   username = input("Username ")
+   choice = input("Generate password? (y/n): ").lower()
+   if choice == "y":
+   password = generate_password()
+   print("Generate password: ",passsword)
+  else:
+  password = input("Password: ")
+password[website] = {
+  "username" : username,
+  "password" : password
+}
+save_passwords(passwords)
+print("\nPassword saved successfully!\n")
+ 
 
