@@ -42,5 +42,19 @@ password[website] = {
 }
 save_passwords(passwords)
 print("\nPassword saved successfully!\n")
+ def view_password():
+   passwords = view_passwords()
+   if not passwords:
+     print("\nNo password saved.\n")
+     return
+    print("\nSaved password\n")
+    for website, info in passwords.items():
+      print("----------------")
+      print("Website :", website)
+      print("Username :", info["username"])
+      print("Password :", info["password"])
+    print()
+
+
  
 
