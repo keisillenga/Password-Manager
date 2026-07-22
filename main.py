@@ -54,7 +54,17 @@ print("\nPassword saved successfully!\n")
       print("Username :", info["username"])
       print("Password :", info["password"])
     print()
+def search_password():
+  passwords = load_passwords()
+   webside = input("Enter webside: ")
+ if webside in passwords:
+   print("\nFound\n")
+   print("Username:", passwords[webside]["username"])
+   print("Password:", passwords[webside]["password"])
+else:
+print("\nPassword not found")
 
+print()
 
  
 
