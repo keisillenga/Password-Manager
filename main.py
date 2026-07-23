@@ -56,15 +56,25 @@ print("\nPassword saved successfully!\n")
     print()
 def search_password():
   passwords = load_passwords()
-   webside = input("Enter webside: ")
- if webside in passwords:
+   website = input("Enter website: ")
+ if website in passwords:
    print("\nFound\n")
-   print("Username:", passwords[webside]["username"])
-   print("Password:", passwords[webside]["password"])
+   print("Username:", passwords[website]["username"])
+   print("Password:", passwords[website]["password"])
 else:
-print("\nPassword not found")
+  print("\nPassword not found")
 
-print()
+  print()
+def delete_password():
+  passwords = load_passwords()
+   website = input("Website to delete: ")
+  if website in passwords:
+    del passwords[website]
+    save_passwords(passwords)
+    print("Deleted successfully\n")
+  else:
+    print("Website not found\n")
+
 
  
 
