@@ -74,7 +74,15 @@ def delete_password():
     print("Deleted successfully\n")
   else:
     print("Website not found\n")
-
+def main():
+  while True:
+    print("=========== PASSWORD MANAGER ============")
+    print("1.Add Password")
+    print("2.View Password")
+    print("3.Search Password")
+    print("4.Delete Password")
+    print("5.Generate Password")
+    print("6.Exit")
 
  
 
