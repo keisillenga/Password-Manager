@@ -83,6 +83,22 @@ def main():
     print("4.Delete Password")
     print("5.Generate Password")
     print("6.Exit")
+    choice = input("\nChoice: ")
+
+    if choice == "1":
+      add_password()
+    elif choice == "2":
+      view_passwords()
+    elif choice == "3":
+      search_password()
+    elif choice == "4":
+      delete_password()
+    elif choice == "5":
+      print("\nGenerated Password: ")
+      print(generate_password())
+      print()
+      
+      
 
  
 
