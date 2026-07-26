@@ -97,6 +97,14 @@ def main():
       print("\nGenerated Password: ")
       print(generate_password())
       print()
+    elif choice == "6":
+      print("Goodbye!")
+      break
+    else:
+      print("\nInvalid choice.\n")
+
+if _name_ == "_main_":
+  main()
       
       
 
