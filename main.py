@@ -13,19 +13,24 @@ def load_password():
        return json.load(file)
      except json.JSONDcodeError:
        return{}
+       
 def save_password():
   with open(FILE_NAME, "w") as file:
     json.dump(password, file, indent=4)
+    
 def generate_password(length=12):
   characters = (
   string.ascii_letters +
   string.digits +
   string.punctuation
 )
+
 password = ""
+
 for _ in range(length):
   password += random.choice(characters)
 return password
+
 def  add_password():
   password = load_password()
    website = input("Website: ")
@@ -42,6 +47,7 @@ password[website] = {
 }
 save_passwords(passwords)
 print("\nPassword saved successfully!\n")
+
  def view_password():
    passwords = view_passwords()
    if not passwords:
@@ -54,6 +60,7 @@ print("\nPassword saved successfully!\n")
       print("Username :", info["username"])
       print("Password :", info["password"])
     print()
+
 def search_password():
   passwords = load_passwords()
    website = input("Enter website: ")
@@ -65,6 +72,7 @@ else:
   print("\nPassword not found")
 
   print()
+
 def delete_password():
   passwords = load_passwords()
    website = input("Website to delete: ")
@@ -74,6 +82,7 @@ def delete_password():
     print("Deleted successfully\n")
   else:
     print("Website not found\n")
+    
 def main():
   while True:
     print("=========== PASSWORD MANAGER ============")
