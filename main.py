@@ -4,6 +4,7 @@ import string
 import os
 
 FILE_NAME = "password-manager"
+
 def load_password():
   if not os.path.exists(FILE_NAME):
     return{}
@@ -46,14 +47,18 @@ password[website] = {
   "password" : password
 }
 save_passwords(passwords)
+
 print("\nPassword saved successfully!\n")
 
  def view_password():
    passwords = view_passwords()
+   
    if not passwords:
      print("\nNo password saved.\n")
      return
+     
     print("\nSaved password\n")
+
     for website, info in passwords.items():
       print("----------------")
       print("Website :", website)
